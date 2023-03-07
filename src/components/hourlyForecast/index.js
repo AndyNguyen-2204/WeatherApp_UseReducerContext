@@ -20,7 +20,6 @@ export default function hourlyForecast({city,setErr}) {
   const [valueTab, setValueTab] = useState(1)
   const navigation = useNavigation();
   const globalState = useContext(store);
-  console.log("🚀 ~ file: index.js:23 ~ hourlyForecast ~ globalState:", globalState)
   const { dispatch } = globalState;
   const handelGetDetail=(data,valueTab)=>{
     if(valueTab === 2){
