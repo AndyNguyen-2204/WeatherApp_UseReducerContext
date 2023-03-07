@@ -8,7 +8,7 @@ export default function Home() {
   const [city, setCity] = useState("Ha noi")
   const [err,setErr]=useState("")
   const updateCity=text=>setCity(text)
-  const debounceOnchange=debounce(updateCity,300)
+  const debounceOnchange=debounce(updateCity,1000)
   return (
     <SafeAreaView style={styles.wrapHomeScreen}>
       <Image source={require("../../assets/homeImg/morning.jpeg")} style={{ height: "100%", width: "100%", resizeMode: "cover" }} />
