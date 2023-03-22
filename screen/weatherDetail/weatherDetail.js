@@ -12,6 +12,7 @@ import Humidity from '../../src/components/humidity/humidity';
 import moment from 'moment';
 export default function WeatherDetail() {
   const globalState = useContext(store);
+  console.log("🚀 ~ file: weatherDetail.js:15 ~ WeatherDetail ~ globalState:", globalState)
   return (
     <SafeAreaView style={{backgroundColor:"#708090",height:"100%",width:" 100%",paddingHorizontal:15}}>
       <View style={styles.topContent}>

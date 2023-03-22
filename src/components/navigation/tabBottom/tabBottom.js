@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import Icon2 from 'react-native-vector-icons/Feather';
+import LineChartScreen from '../../../../screen/lineChart/lineChart';
 export default function TabBottom() {
   const Tab = createBottomTabNavigator();
   return (
@@ -18,6 +19,14 @@ export default function TabBottom() {
        tabBarHideOnKeyboard:true
     }}
     >
+    <Tab.Screen name="LineChart" component={LineChartScreen}
+    options={{
+      headerShown:false,
+      tabBarIcon: ({ color, size }) => (
+        <Icon1 name="linechart" color={color} size={size} />
+      ),
+    }}
+    />
     <Tab.Screen name="Home" component={Home}
     options={{
       headerShown:false,

@@ -68,9 +68,11 @@ export default function hourlyForecast({city,setErr}) {
         })
         setErr("")
         actFetchApiRequest(res.data, dispatch)
-        
-      }).catch(
-        setErr("Không tìm thấy thành phố  ")
+      }).catch(err=>{
+        if(city!==""){
+          setErr("Không tìm thấy thành phố  ")
+        }
+      }  
       )
   }, [city])
   return (
